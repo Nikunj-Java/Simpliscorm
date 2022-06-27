@@ -15,7 +15,14 @@ follow the below steps
 	-git init
 	-git commit -m "first commit"
 	-git branch -M main
-	-git remote add origin 	-https://github.com/Nikunj-Java/Simpliscorm.git
+	-git remote add origin 	-	-https://github.com/Nikunj-Java/Simpliscorm.git
+	-git add .
+	-git commit -m "Session One notes"
+	-git push -u origin main
+
+--------------------------------------------------------
+for add/update/delete in git hub repository
+
 	-git add .
 	-git commit -m "Session One notes"
 	-git push -u origin main
