@@ -8,3 +8,14 @@ create Repository
 
 give name, description and select public and click on create 
 -----------------------------------------------------
+follow the below steps
+1. open cmd from you local machine
+2. move to the root directory which you want to upload on git hub
+3. write below codes-
+	-git init
+	-git commit -m "first commit"
+	-git branch -M main
+	-git remote add origin 	-https://github.com/Nikunj-Java/Simpliscorm.git
+	-git add .
+	-git commit -m "Session One notes"
+	-git push -u origin main
