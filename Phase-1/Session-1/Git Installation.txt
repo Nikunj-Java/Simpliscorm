@@ -1,0 +1,10 @@
+download git from: https://git-scm.com/downloads
+install  with default installation steps
+
+
+create accout on GitHub: https://github.com/
+
+create Repository
+
+give name, description and select public and click on create 
+-----------------------------------------------------
