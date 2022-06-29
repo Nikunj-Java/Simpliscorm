@@ -10,7 +10,6 @@ public class PriorityQueueDemo {
 		//priorityQueue doesn't allow null
 		//we can't create priority quueue that are non -camparable
 		//que retrival operations poll, remove ,peek
-		//it follows  ascending order in integer
 		PriorityQueue<Integer> pQueue= new PriorityQueue<Integer>();
 		
 		//adding items to the pQueue using add()
