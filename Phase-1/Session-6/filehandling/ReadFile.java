@@ -33,14 +33,14 @@ public class ReadFile {
 			
 		}
 		
-		//2. read using FileoutputStream
+		//2. read using FileinputStream
 		
 		public static void readFileUsingFileInputStream() throws IOException 
 		{
 			
 			FileInputStream steram= new FileInputStream("D:\\Simpliscorm\\Phase-1\\Session-6\\testFile2.txt");
 			 
-					int data;
+			int data;
 			
 			while((data=steram.read())!=-1) {
 				System.out.print((char)data);
@@ -52,7 +52,7 @@ public class ReadFile {
 		public static void readFileUsingNIO() throws IOException
 		{
 			 List<String> list =Collections.emptyList();
-			 Path path= Paths.get("D:\\Simpliscorm\\Phase-1\\Session-6\\testFile5.txt");
+			 Path path= Paths.get("D:\\Simpliscorm\\Phase-1\\Session-6\\testFile3.txt");
 			 
 			 list= Files.readAllLines(path,StandardCharsets.UTF_8);
 			 
