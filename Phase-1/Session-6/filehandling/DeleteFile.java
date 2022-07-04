@@ -11,8 +11,8 @@ public class DeleteFile {
 	
 	public static void main(String[] args) {
 		
-		
-		Path path= Paths.get("D:\\Simpliscorm\\Phase-1\\Session-6\\deletefile.txt");
+		 
+		Path path= Paths.get("D:\\Simpliscorm\\Phase-1\\Session-6\\testFile4new.txt");
 		
 		try {
 			if(Files.deleteIfExists(path))
@@ -30,7 +30,7 @@ public class DeleteFile {
 		}
 		catch (IOException e) {
 			// TODO: handle exception
-			System.out.println("Invalid Permission");
+			System.out.println("File in non empty");
 		}
 		
 		
