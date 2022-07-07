@@ -3,7 +3,10 @@ public class SelectionSort {
 
     public static void main(String[] args) {
 
-    int[] arr = {20,12,10,15,2};
+    //int[] arr = {20,12,10,15,2};
+    
+    int[] arr = {30,43,1,15,20};
+    
     int length = arr.length;
     selectionSort(arr);
     
