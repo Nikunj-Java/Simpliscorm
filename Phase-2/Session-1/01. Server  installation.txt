@@ -1,0 +1,66 @@
+
+1. Let's  Download Apache tomcat server (say Apache tomcat 9.0)
+	link: https://tomcat.apache.org/download-90.cgi#9.0.65
+	
+	> extact the  folderto the desire directory
+
+2. Create New WorkSpace> select the workspace>launch
+
+3. File>new>others>Servers>Select Apache tomcat> 
+	> select the version that you had downloaded
+	> give the path
+	> click  on next 
+	>  finish
+	once server is installed you will  see server tab below the eclips
+4.Right  click on it and Start the Server  
+
+
+--------------------------------------------------------------------------
+
+
+Let's CreateOne Web App
+
+------------------------
+
+
+goto> files>new>DynamicWebProject
+	1. give the name
+	2. you can select runtime (you created server)
+	3. click  on next
+	4. check the check box forcreating web.xml file.
+	5. create a project
+goto> src>main>webapp
+	1.  right click on webapp folder and create new file called  
+		'index.html'
+
+index.html
+-------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Hello World</h1>
+<h2>Hello World</h2>
+<h3>Hello World</h3>
+<h4>Hello World</h4>
+<h5>Hello World</h5>
+<h6>Hello World</h6>
+</body>
+</html>
+
+
+
+
+---------------
+
+
+save it 
+
+
+right click on the project> run as> run on server> choose  apache tomcat server > next  > finish
+ 
