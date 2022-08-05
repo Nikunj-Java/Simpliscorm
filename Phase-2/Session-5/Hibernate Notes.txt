@@ -1,0 +1,46 @@
+What is hibernate?
+-------------------
+
+- Hibernate is a java framework that simplifies the development of  JAVA applications  for  the  communication with DATABASE
+- it is OPEN SOURCE ,LIGHT WEIGHT,ORM(OBJECT RELATIONAL MAPPING) tool
+- It implements the specification of JPA(  Java Persistance API)
+
+
+What is ORM Tool ?
+-----------------
+
+- an ORM tool is used for data creation , data manipulation, and data access
+- it is a programming  technique that maps  the object to te data stored  in the database
+- basically it uses JDBC API tointeract with Database
+
+
+What is JPA?
+-----------------
+
+- java persistance APIprovides creation functionlities and standard to ORM tolls
+- it is available in 'javax.persistance' package having classes and  interfaces
+
+ADVANTAGES:
+----------------- 
+1. open source and lightweight 
+2. Fast performance(cache are used internally)
+3. Database independent Query (HQL- it is object oriented vaersion of SQL)
+4. Automatically creates table
+5. Simplifies Complex join in Database
+6. Provides Query statistics and Database Status
+
+
+What id HQL?
+-----------------
+- it  is  same as SQL(Structured Query Language)but it doesn't depends  uponthe table  of database
+- instead of table name we use classname in HQL.
+- so that it is database independent query language
+
+ADVANTANGES OF HQL?
+--------------------
+
+- IT IS DATABASE INDEPENDENT
+- IT SUPPORTS POLYMORPHIC QUERIES
+- IT IS EASY TO LEARN FOR JAVA PROGRAMERS 
+
+
