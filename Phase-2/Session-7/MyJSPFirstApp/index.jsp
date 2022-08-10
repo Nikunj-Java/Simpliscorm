@@ -44,5 +44,9 @@ out.print("Result is: "+c);
 <br>
 
 <%="Today is: "+ new Date() %>
+
+
+<br><br>
+<a href="implicit.jsp">Click here for IMPLICIT OBJECT Demo</a>
 </body>
 </html>
