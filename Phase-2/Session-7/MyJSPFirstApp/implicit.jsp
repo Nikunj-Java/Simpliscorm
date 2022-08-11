@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	errorPage="error.jsp"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
@@ -38,5 +39,16 @@ out.print("Page Context Attribute: "+pageContext.getAttributesScope("userid"));
 
 %>
 
+
+<%
+	String error=request.getParameter("error");
+	if(error!=null){
+		throw new RuntimeException("Exception Occured");
+	}
+
+%>
+
+<br>
+<a href="implicit.jsp?error=1">Check Use of Exception Object</a>
 </body>
 </html>
