@@ -10,8 +10,10 @@
 <body>
 <h3>Products Details Page</h3>
 <c:set var="product" value="${obj }"></c:set>
+
 Name: ${product.id } <br>
 Price: ${product.price } <br>
 Date: ${product.dateAdded } <br>
+
 </body>
 </html>
