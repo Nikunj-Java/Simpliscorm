@@ -1,0 +1,13 @@
+open cmd and move to the project folder
+
+keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
+
+1. first and last name: localhost
+2. Organizational unit: website
+3. name of your organization:  website
+4. city: mumbai
+5. state: maharashtra
+6. two-letter contry code: 91
+7. then type yes
+
+now copy the 'ssl-server.jks' key to src>main>resources folder
