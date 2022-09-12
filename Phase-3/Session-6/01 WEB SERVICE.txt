@@ -1,0 +1,124 @@
+***************************************************************************************************************
+1. What is WEB SERVICE?
+***************************************************************************************************************
+- A web service is a client and server application for communication
+- it is a software system for machine to machine communication (M2M)
+- it is consisiting of some standard protocols for exchanging the information
+- There are two types of WEBSERVICE
+	1. SOAP Web Service
+	2. RESTFUL Web Service
+- Components of Web services are
+	1. SOAP - Simple Object Access Protocol
+	2. UDDI - Universal Description Discovery Integration
+	3. WSDL - Web Service Descriptive Language
+
+
+***************************************************************************************************************
+2. How Web Service Works?
+***************************************************************************************************************
+- A web service enables communication amoung various applications by using standard protocols such as HTML,XML,WSDL,SOAP
+- A Web Service takes the help of
+	1. XML : to tag the data
+	2. SOAP: to transfer a message
+	3. WSDL: to describe the availaibilty of service
+- we cab build java-based webservice on solaris that is accessible from your  visual basics programm that runs  on your windows
+
+***************************************************************************************************************
+3. RESTFul WEB SERVICE
+***************************************************************************************************************
+- in 2002 , the web communication has released the defination on WSDl and SOAP web services. This formed the standards of how  service are implemented
+- in 2004 the web consortium also released the defination of  and additional standard required for  Application  called RESTful
+- Over past couple of years this standards become popular . and they are being used by many of the popular websites around the world which includes FACEBOOK and TWITTER.
+
+
+WHY RESTFul Applications to be Simple,  Light Weight and Fast?
+------------------------------------------------------------------------
+1. Resources Identification through URI(Uniform Resource Indentifier)
+2. Uniform Interface
+3. Self Descriptive Message
+4. Stateful Interaction Through Hyperlinks
+
+
+Importance of RESTFUL WEB SERVICES
+------------------------------------------------------------------------
+1. Resources Indetification Through URI
+------------------------------------------------------------------------
+- A restful Webservice exposes a set of resources that identifies  the target of interaction with its client 
+- Resources are indetified by URI's , which provides a global addressing space and service Discovery
+
+
+------------------------------------------------------------------------
+2. Uniform Interface
+------------------------------------------------------------------------
+- Resources are manupulated using a fixed set of four Operations  also known as CRUD operations like
+ CREATE, RETRIVE,UPDATE,DELETE
+- Four Methods are used to manupulate the data
+	1. POST 	: CREATE NEW DATA
+	2. GET		: RETRIVE THE DATA
+	3. PUT		: UPDATE THE DATA
+	4. DELETE	: DELETE THE DATA
+
+------------------------------------------------------------------------
+3. Self Descriptive Message
+------------------------------------------------------------------------
+- Resources are decoupled from their representation so that their  content can be accessed in a variety of  format such as HTML,XML,PLAIN TEXT,PDF,JPEG,JSON And Others.
+
+------------------------------------------------------------------------
+4. StateFul Interaction Through Hyperlinks
+------------------------------------------------------------------------
+- Every Interaction with resource is stateless; thet is why  request messages are self contained.
+- Stateful interaction are based on concept of explicit state transfer
+- several techniques are exist to exchange state such as URI rewritting, Cokkies and Hidden form Fields.
+- States can be embded in response message to point to valid future state interaction
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
