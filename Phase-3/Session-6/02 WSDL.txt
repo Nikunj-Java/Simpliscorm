@@ -1,0 +1,62 @@
+***************************************************************************************************************
+What is WSDL?
+***************************************************************************************************************
+
+- WSDL stands for webservice descritive langugae
+- it is the standard format for describing a webservice
+- WSDL was Jointly developed by Miscrosoft and IBM.
+
+History:
+---------------------------------------------------------
+- WSDL 1.0 (SEP-2000) was developed by IBM , MICROSOFT and ARIBA to describe  webservice for their SOAP toolkit
+- it was build by Combining two service descriptive language:
+	1. NASSL	: Network Application Service Specification Langugae
+	2. SDL		: Service Descriptive Langugae
+
+Features of WSDL:
+----------------------------------------------------------
+- WSDL is XML -based protocol for information exchange in  decentralized and distibuted environments
+- WSDL definations describe how to access web service  and what operation it will perform
+- WSDL is a langugage for describing how to interface with XML based Service
+- WSDL is an integral part of Universal Description Discovery  and Integration (UDDI) , an XML based World Wide Bussiness registry
+- WSDL is the language that UDDI uses.
+- WSDL is pronouced as 'WIZ-DULL' and Spell out as 'W-S-D-L'
+
+USES OF WSDL:
+------------------------------------------------------------
+- WSDL is often used in combination with SOAP and XML Schema to provide  web services over internet
+- A client program connecting with webservice  can read  WSDL to determine what functions are availableon the server
+- Any Specific datatypes used are embded in WSDL file in the  form of XML schema
+- the client can then uses SOAP to actually cal one of  function listed in WSDL
+- REST is a way to access resources which lies in a particular environment.
+
+for Example:
+------------
+
+you can have a server that could be hosting you important  documents or picture or videos. all of this are example of resources . if client says a web browser needs this resources . it has to send a request  to the server to access these  resources . Now REST service defines a Way on How these resource can be accessed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
