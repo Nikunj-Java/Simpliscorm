@@ -34,29 +34,3 @@ for Example:
 ------------
 
 you can have a server that could be hosting you important  documents or picture or videos. all of this are example of resources . if client says a web browser needs this resources . it has to send a request  to the server to access these  resources . Now REST service defines a Way on How these resource can be accessed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
