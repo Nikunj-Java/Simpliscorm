@@ -18,10 +18,16 @@ public class UserService {
 	}
 	
 	//List User Method
-	
 	public List<User> getAllUser(){
 		return repo.findAll();
 	}
 	
+	//GET USER BY ID
+	public User getUserById(int id) {
+		if(repo.findById(id).isPresent())
+			return repo.findById(id).get();
+		else 
+			return null;
+	}
 
 }
