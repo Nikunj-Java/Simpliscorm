@@ -29,5 +29,20 @@ public class UserService {
 		else 
 			return null;
 	}
+	
+	//update user by id
+	public User updateUserById(User user,int id) {
+		if(repo.findById(id).isPresent())
+		{
+			User old= repo.findById(id).get();
+			old.setCountry(user.getCountry());
+			old.setName(user.getName());
+			old.setEmail(user.getEmail());
+			return repo.save(old);
+		}
+		else
+			return null;
+	}
+	
 
 }

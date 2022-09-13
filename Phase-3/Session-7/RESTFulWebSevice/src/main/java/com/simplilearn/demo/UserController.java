@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,6 +48,15 @@ public class UserController {
 		else
 			return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
 		
+	}
+	//upadte user by id
+	@PutMapping("/{id}")
+	public ResponseEntity<Object>updateUserbyId(@RequestBody User user,@PathVariable int id){
+		User data=service.updateUserById(user, id);
+		if(data!=null)
+			return new ResponseEntity<Object>(data,HttpStatus.OK);
+		else
+			return new ResponseEntity<Object>("User is Not Available",HttpStatus.NOT_FOUND);
 	}
 	
 
