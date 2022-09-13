@@ -1,5 +1,7 @@
 package com.simplilearn.demo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,12 @@ public class UserService {
 	
 	public User addUser(User u) {
 		return repo.save(u);
+	}
+	
+	//List User Method
+	
+	public List<User> getAllUser(){
+		return repo.findAll();
 	}
 	
 
