@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,6 +59,14 @@ public class UserController {
 		else
 			return new ResponseEntity<Object>("User is Not Available",HttpStatus.NOT_FOUND);
 	}
+	//delete user by id
 	
-
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Object> deleteUserByid(@PathVariable int id){
+		
+		if(service.deleteUser(id))
+			return new ResponseEntity<Object>("User Deleted",HttpStatus.OK);
+		else
+			return new ResponseEntity<Object>("No User Found",HttpStatus.NOT_FOUND);
+	}
 }
