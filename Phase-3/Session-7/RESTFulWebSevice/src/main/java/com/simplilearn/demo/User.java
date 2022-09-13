@@ -41,6 +41,16 @@ public class User {
 		this.country = country;
 	}
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+	public User(String name, String email, String country) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.country = country;
+	}
 	
+	 
 
 }
