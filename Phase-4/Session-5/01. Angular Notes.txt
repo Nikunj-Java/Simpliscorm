@@ -1,0 +1,100 @@
+**************************************************
+ANGULAR
+**************************************************
+
+install node js from link:
+
+https://nodejs.org/en/download/
+--------------------------------------------
+
+STEP:1 CHECKING THE VERSION OF NODE AND NPM
+----------------------------------------------
+
+1. TO CHECK THE VERSION OF NODE
+
+>open cmd> node -v
+	output:v16.14.2
+2. NPM MANAGER - NODE PACKAEGE MANAGER
+
+-----provides the bundle of packages which we can dwonloa directly using cmd
+------eg: angular,react,view js,TypeScript,BootStrap
+-------NPM installed automatically whwnever you download NODE JS in your System
+
+------To check the version of NPM
+
+
+> npm -v
+
+	output: 8.19.1
+
+--------------------------------------------------
+STEP:2 INSTALLING TYPESCRIPT USING NPM
+--------------------------------------------------
+
+> npm install typescript -g
+
+----To check the Version-----
+
+>tsc -v
+
+	Output: Version 4.8.4
+
+--------------------------------------------------
+TYPESCRIPT FIRST PROGRAM IN VISUAL STUDIO CODE
+--------------------------------------------------
+
+prepare first.ts file
+
+goto>visualstudiocode>new >folder>create your folder>first.ts 
+
+
+first.ts
+----------------------------------------------------
+let a: number;
+a=56;
+
+let b:number=12;
+
+
+let fname:string="Nikunj Soni";
+
+console.log(a+b);
+
+console.log(fname);
+
+
+function test(num1:number,num2:number){
+    return num1+num2;
+}
+
+console.log("Addition: "+test(2,3))
+
+--------------------------------------------------
+
+goto>terminal>neeterminal>choose cmd
+
+> tsc first.ts
+
+you will see that a new file named 'first.js' is automatically prepared in the  folder
+
+
+> node  first.js
+
+
+you will see output in console
+
+
+
+--------preparing tsconfig.json file-------
+
+- it explains that how .ts file get converted to .js file
+
+
+> tsc --init (willcreate tsconfig.json file and we can check the same)
+
+
+
+
+
+
+
