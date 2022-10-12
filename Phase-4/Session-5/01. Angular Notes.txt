@@ -93,8 +93,75 @@ you will see output in console
 > tsc --init (willcreate tsconfig.json file and we can check the same)
 
 
+**************************************************
+STEP:3 INSTALLING ANGULAR IN YOUR MACHINE
+**************************************************
+LET'S INSTALL ANGULAR
+
+> npm install -g @angular/cli (OR npm i -g @angular/cli)
+
+to check the version
+
+> ng --version or ng v
 
 
+**************************************************
+CREATE FIRST ANGULAR APPLICATION
+**************************************************
+> ng new myapp (you can give any name:myapp)
+	it will ask you two questions
+	1. do  you want to add angular routing : y
+	2. choose CSS: CSS
+
+once the app is ready you need to change the directory or simply open the folder with app name
+
+
+> cd myapp
+
+or Goto> File>Open Folder>yourappname
+
+
+To start the Application
+
+>ng serve
+
+
+once the app is started goto> browser  type >localhost:4200
+
+
+if you want to change the layout of app
+
+goto>app>app.component.html file and edit the code you want
+
+
+<h1>My First Angular App</h1>
+
+
+save it and check the same on browser
+
+
+
+--------------------------------------------------
+
+let's prepare component
+
+goto>terminal>newterminal>cmd
+
+>ng generate component header (or ng g c header)  //header is name of component
+
+goto>app>header.component.ts file and copy the selectro tag and add it to the app.component.html like below using tag<>
+
+app.component.html
+----------------------------------
+<h1>My First Angular App</h1>
+
+<app-header></app-header>
+
+
+save it and check the same
+
+
+similarly you can prepare many compoenents and do the same procedure
 
 
 
