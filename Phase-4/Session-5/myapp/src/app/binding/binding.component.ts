@@ -22,4 +22,12 @@ export class BindingComponent implements OnInit {
 name:string="NIKUNJ SONI";
 url:string="http://www.google.com/";
 
+we:number=700;
+
+flag:boolean=false;
+
+show(){
+  this.flag=!this.flag;
+}
+
 }

@@ -13,9 +13,9 @@
         <!--NgDirectives eg: *ngFor-->
         <!--{{}} is used for fetching a data from source to view called interpolation-->
         <tr *ngFor="let p of products">
-            <td>{{p.name}}</td>
-            <td>{{p.price}}</td>
-            <td>{{p.available}}</td>
+            <td [class.inStock]="true">{{p.name}}</td>
+            <td [style.font-weight]="we">{{p.price}}</td>
+            <td [class.inStock1]="true">{{p.available}}</td>
             <td>{{p.ratings}}</td>
             
         </tr>
@@ -37,3 +37,11 @@
 <h2>Let's bind the data from source to view using property binding:[] bind the data with attribute</h2>
 
 <a [href]="url">Connect to Google</a>
+
+<div class="container">
+    <button class="btn btn-primary" (click)="show()">Show Div</button>
+
+    <div *ngIf="flag" style="background-color: yellowgreen;">
+    THIS IS MY DIV AND YOU HAVE SUCCESSFULLY IMPLEMENTED EVENT BINDING
+    </div>
+</div>
