@@ -1,0 +1,25 @@
+<p>binding works!</p>
+
+<h1>Print JSON Array</h1>
+
+<br>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th><th>Price</th><th>Available</th><th>Ratings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--NgDirectives eg: *ngFor-->
+        <!--{{}} is used for fetching a data from source to view called interpolation-->
+        <tr *ngFor="let p of products">
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.available}}</td>
+            <td>{{p.ratings}}</td>
+            
+        </tr>
+    </tbody>
+
+
+</table>
