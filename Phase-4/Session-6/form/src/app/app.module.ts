@@ -10,6 +10,9 @@ import { UserComponent } from './user/user.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ChangeColorDirective } from './ChangeColorDirective';
 import { HighLightColor } from './HighLightColor';
+import { CustomPipe } from './CustomPipe';
+import { PipdemoComponent } from './pipdemo/pipdemo.component';
+ 
  
 
 @NgModule({
@@ -19,7 +22,9 @@ import { HighLightColor } from './HighLightColor';
     UserComponent,
     DirectiveComponent,
     ChangeColorDirective,
-    HighLightColor
+    HighLightColor,
+    CustomPipe,
+    PipdemoComponent
   ],
   imports: [
     BrowserModule,
