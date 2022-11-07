@@ -1,0 +1,46 @@
+STEP: 1 DOWNLOAD SELENIUM SERVER STANDALONE FILE
+**************************************************
+LINK:https://www.selenium.dev/downloads/
+goto>previous releases  and download selenium-server-standalone-3.5.0 or 3.5.3 .jar file
+
+*************************************************
+STEP:2 SET UP HUB
+*************************************************
+
+copy the selenium server file to desire directory and open cmd and move to the same directory and execute below command
+
+> java -jar selenium-server-standalone-3.5.0.jar -role hub
+
+if all ok you will get below msg:
+Selenium Grid hub is up and running
+
+
+but if you are getting port error or port busy error
+
+>java -jar selenium-server-standalone-3.5.0.jar -role hub -port 4445
+
+
+
+now> goto the bowser: http://your_ip_address:port/grid/console
+
+eg: http://192.168.43.109:4444/grid/console
+
+
+*****************************************************************
+STEP: 3 PREPARING NODE
+*****************************************************************
+1. COPY THE LATEST GOOGLE CHORME DRIVER TO BELOW DESIRED LOCATION
+
+your_google_chrome_driver_path=C:\Program Files\Google\Chrome\Application\chromedriver.exe
+
+
+2. Open Another cmd and move to the root directory
+
+> java -Dwebdriver.chrome.driver="your_google_chrome_driver_path" -jar selenium-server-standalone-3.5.0.jar -role node http://youripaddress:port/grid/register/
+
+eg:java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.0.jar -role node -hub http://192.168.43.109:4444/grid/register/
+
+
+similarly we can connect another node
+
+java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.0.jar -role node -port 4457 -hub http://192.168.43.109:4444/grid/register/
