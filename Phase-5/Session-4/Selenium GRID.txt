@@ -41,6 +41,26 @@ your_google_chrome_driver_path=C:\Program Files\Google\Chrome\Application\chrome
 eg:java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.0.jar -role node -hub http://192.168.43.109:4444/grid/register/
 
 
+
+************************************************************************
+STEP:4 PREPARING CUSTOM NODE AND HUB
+************************************************************************
+GOTO> GOOGLE> SERACH FOR CUSTOM HUB AND CUSTOM NODE FOR SELENIUM GRID
+
+
+LINK: https://www.seleniumeasy.com/selenium-tutorials/configure-selenium-grid-using-json-config-file
+
+
+OPEN NOTE PAD AND SAVE BOTH FILES AS hubconfig.json and nodeconfig.json
+
+
+
+
+1. CUSTOM HUB
+----------------
+
+-java -jar selenium-standalone-3.5.0.jar -role hub -hubConfig myhubconfig.json
+
 similarly we can connect another node
 
 java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.0.jar -role node -port 4457 -hub http://192.168.43.109:4444/grid/register/
