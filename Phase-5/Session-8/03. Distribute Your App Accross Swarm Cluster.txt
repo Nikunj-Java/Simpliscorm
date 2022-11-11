@@ -1,0 +1,136 @@
+************************************************************************
+STEP:1 AWS EC2 UBUNTU INSTANCE
+************************************************************************
+> CREATE 2 AWS UBUNTU INSTANCE
+> MAKE ONE AS MASTER NODE AND ANOTHER AS WORKER
+> COPY THE IP ADDRESS OF MASTERNODE AND WORKER NODE
+
+************************************************************************
+STEP:2 INSTALL DOCKER IN BOTH INSTANCE
+************************************************************************
+
+goto> AWS> EC2 > MASTER-instance>CONNECT >SSH>COPY THE KEY AND CONNECT USING MOBA X-TERM
+
+> sudo apt-get update
+> sudo apt-get install ca-certificates curl gnupg lsb-release
+> sudo mkdir -p /etc/apt/keyrings
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+> echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+> sudo apt-get update
+> sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+-------to varify the installation----------
+
+> sudo docker -v
+
+
+************************************************************************
+STEP:3 EDIT HOST FILE TO DEFINE MASTER AND WORKER NODE IP 
+************************************************************************
+
+FOR MASTERNODE:
+------------------
+
+> sudo vi /etc/hosts
+
+press 'i'
+
+copy_master_node_private_ip master
+
+press 'esc'
+
+> :wq!
+
+> ping master
+
+if ping is started means all going right
+
+to stop the ping press ctr+c
+
+
+FOR WORKERNODE:
+------------------
+
+> sudo vi /etc/hosts
+
+press 'i'
+
+copy_worker_node_private_ip worker
+
+press 'esc'
+
+>:wq!
+
+> ping worker
+
+if ping is started means all going right
+
+to stop the ping press ctr+c
+
+
+************************************************************************
+STEP:4 SWARM INITIALIZATION IN MASTER NODE
+************************************************************************
+
+eg: sudo docker swarm init --advertise-adr <IP ADDRESS OF MASTER NODE>
+
+>sudo docker swarm init --advertise-adr master
+
+or 
+
+>sudo docker swarm init --advertise-adr 172.31.90.235
+
+if error is coming
+
+> sudo docker swarm init
+
+
+[note: 
+1. After successfull attempt you will get one token for connection with worker node
+2. copy that token and paste it to the worker node by adding prefix 'sudo' <your token >
+]
+
+
+my token:
+----------
+
+
+docker swarm join --token SWMTKN-1-0ut24kmx2a7wifn1a2ekrkeopdep4gw4yp4daljtmbpqwbykkm-09lj5kp58fj0jd95b8ntbecaq 172.31.88.119:2377
+
+goto>workernode
+ 
+> sudo docker swarm join --token SWMTKN-1-0ut24kmx2a7wifn1a2ekrkeopdep4gw4yp4daljtmbpqwbykkm-09lj5kp58fj0jd95b8ntbecaq 172.31.88.119:2377
+
+goto> masternode
+
+>sudo docker node ls
+
+once worker will join the swarm you will see two names in the list
+
+
+************************************************************************
+STEP:5 PULL GIT HUB IMAGES(CUSTOM IMAGES)
+************************************************************************
+
+LINK:https://github.com/Nikunj-Java/docker_master.git
+
+> git clone https://github.com/Nikunj-Java/docker_master.git
+> ls (to check available folders)
+> cd docker_master
+
+-----let's build the image in a docker container------------------
+
+> sudo docker build -t myimage . (. is mendatory)
+> sudo docker images (to check the image is prepared or not)
+
+************************************************************************
+STEP:6  SERVICE WITH REPLICAS
+************************************************************************
+
+> sudo docker service create --name myclusterdemo1 --publish 8081:8081 --replicas 2 myimage
+
+output: verify: Service converged
+
+-----to check the running service-----------
+
+> sudo docker service ps myclusterdemo1
