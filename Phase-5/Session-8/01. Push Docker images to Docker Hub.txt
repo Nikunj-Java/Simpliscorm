@@ -10,3 +10,19 @@ Link: https://hub.docker.com/
 give userid:
 give password: 
 [Note: password is not visible]
+
+if you are getting some permission denied error execute below code
+> sudo chmod 666  /var/run/docker.sock
+> docker login 
+
+give userid:
+give password: 
+[Note: password is not visible]
+
+************************************************************************STEP: 2 PUSH AN IMAGE TO DOCKER HUB
+************************************************************************
+
+EG: sudo docker tag <name_of_your_image> <username>/<name_of_directory-you can give any name>
+
+> sudo docker tag myimage nikunj0510/myimagenov2022
+> sudo docker push nikunj0510/myimagenov2022
