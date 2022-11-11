@@ -1,0 +1,12 @@
+************************************************************************
+STEP: LOOGED IN TO DOCKER HUB
+************************************************************************
+Create Account on DockerHub
+Link: https://hub.docker.com/
+------------------------------------------------------------------------
+
+> sudo docker login
+
+give userid:
+give password: 
+[Note: password is not visible]
