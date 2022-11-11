@@ -13,7 +13,7 @@ docker swarm: managing multiple containers running on different host
 where we will initiate a swarm that node will become leader (Master) and another can join this node and you can use this as worker
 ------------------------------------------------------------------------
 
-toset the permission 
+to set the permission 
 
 > sudo chmod 666 /var/run/docker.sock
 
