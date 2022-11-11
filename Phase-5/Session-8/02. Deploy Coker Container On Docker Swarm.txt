@@ -1,0 +1,52 @@
+************************************************************************
+DEPLOY DOCKER CONTAINER ON DOCKER SWARM
+************************************************************************
+
+we have already prepared one image 'myimage' pulled from github and pushed to docker hub
+
+continue.....
+
+
+------------------------------------------------------------------------
+
+docker swarm: managing multiple containers running on different host
+where we will initiate a swarm that node will become leader (Master) and another can join this node and you can use this as worker
+------------------------------------------------------------------------
+
+toset the permission 
+
+> sudo chmod 666 /var/run/docker.sock
+
+STEP:1 INITIATE DOCKER SWARM
+
+> sudo docker swarm init (machine will become leader node)
+
+
+output:
+Swarm initialized: current node (vhmjsb93ez7eiaxv70fthq03o) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-451jmwrem0qeoact0ulohs5s9gj4doocz0x773qgsfrhil4g29-0dcqtlkkdwik1m9cputsfq8mq 172.31.92.89:2377
+------------------------------------------------------------------------
+
+STEP:2 CREATE SERVICE IN THIS DOCKER SWARM
+
+> sudo docker service create -p 80:80 --name myservice myimage
+> curl localhost (this will print firstpage of docker_master)
+
+
+also you can copy your publicip:80 on browser
+
+
+STEP: SCALE THE DOCKER CONTAINER ON DOCKER SWARM
+
+> docker service ps myservice (name of your service)
+
+
+--------To Scale the Service------------
+	> docker service scale myservice=3
+	> docker service ls
+	> docker service ps myservice
+
+
